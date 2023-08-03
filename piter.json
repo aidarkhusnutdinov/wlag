@@ -1,0 +1,43 @@
+[
+  {"name": "Жил, учился и гулял"},
+
+    [{
+      "id": 0,
+      "title": "Введение",
+      "image": "https://peterburg.center/sites/default/files/styles/long_image/public/img/podborki/2017-04/kazanskiy_kafedralnyy_sobor.jpg",
+      "audio": "https://github.com/aidarkhusnutdinov/wlag/raw/main/00_intro.mp3",
+      "text":
+        "В Санкт-Петербурге, также известном как Петербург, есть множество достопримечательностей, которые привлекают туристов со всего мира. Вот некоторые из самых известных из них."
+      
+    },
+    {
+      "id": 1,
+      "title": "Казанский собор",
+      "image": "https://peterburg.center/sites/default/files/styles/long_image/public/img/podborki/2017-04/kazanskiy_kafedralnyy_sobor.jpg",
+      "audio": "https://github.com/aidarkhusnutdinov/wlag/raw/main/01_gorky.mp3",
+      "text":
+        "История Казанского собора начинается с 1801 года, когда было принято решение построить его в честь победы русских войск во главе с Александром Суворовым над французами в 1799 году. Строительство собора началось в 1801 году, но из-за различных обстоятельств и событий оно затянулось, и собор был окончательно завершен только в 1811 году. Казанский собор воссоздает архитектурный стиль русского классицизма и примечателен своей красотой и величием. Он имеет удивительную колоннаду с шестью коринфскими колоннами, которые украшены различными скульптурами. Фасад здания украшен росписями и рельефами.",
+        "latitude": 55.79868,
+        "longitude": 49.14770
+      },
+    {
+      "id": 2,
+      "title": "Эрмитаж",
+      "image": "https://peterburg.center/sites/default/files/styles/long_image/public/img/podborki/2017-04/kazanskiy_kafedralnyy_sobor.jpg",
+      "audio": "https://github.com/aidarkhusnutdinov/wlag/raw/main/02_fuks.mp3",
+      "text":
+        "Один из крупнейших и самых знаменитых музеев мира, который находится в бывшем Зимнем дворце. В его коллекции представлены произведения искусства и артефакты разных культур и эпох.",
+        "latitude": 55.80001413104944,
+        "longitude": 49.129785426295996
+      },
+     {
+      "id": 3,
+    "title": "Зимний дворец и Дворцовая площадь",
+    "image": "https://peterburg.center/sites/default/files/styles/long_image/public/img/podborki/2017-04/kazanskiy_kafedralnyy_sobor.jpg",
+    "audio": "https://github.com/aidarkhusnutdinov/wlag/raw/main/03_lyadskoy.mp3",
+    "text":
+      "Прекрасный архитектурный комплекс, ставший символом города. Здесь находятся не только Эрмитаж, но и другие интересные достопримечательности.",
+      "latitude": 55.792930136807286,
+      "longitude": 49.13407639684617
+    }]
+  ]

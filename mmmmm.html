@@ -8,22 +8,55 @@
     <div class="greatIdea">Click the button to get a random line from the data file!</div>
     <button class="sexyButton">Get Random Line</button>
     <script>
-      const button = document.querySelector('.sexyButton');
-      const divElement = document.querySelector('.greatIdea');
+  const button = document.querySelector('.sexyButton');
+  const divElement = document.querySelector('.greatIdea');
 
-      async function fetchLinesFromDataFile() {
-        const response = await fetch('https://www.dropbox.com/s/if8vlelndsnotuf/ideas.txt');
-        const text = await response.text();
-        const lines = text.split('\n').filter(line => line.trim() !== '');
-        return lines;
-      }
+  // Create a new style element
+  const styleElement = document.createElement('style');
 
-      button.addEventListener('click', async () => {
-        const lines = await fetchLinesFromDataFile();
-        const randomIndex = Math.floor(Math.random() * lines.length);
-        const randomLine = lines[randomIndex];
-        divElement.textContent = randomLine;
-      });
-    </script>
+  // Add the @font-face rule to the style element
+  styleElement.textContent = `
+    @font-face {
+      font-family: 'CustomFont';
+      src: url('https://cdn.jsdelivr.net/gh/aidarkhusnutdinov/wlag@raw/main/20Kopeek-Regular_ALMJygo.otf') format('opentype');
+    }
+  `;
+
+  // Append the style element to the head of the document
+  document.head.append(styleElement);
+
+  // Set the font-family of divElement to 'CustomFont'
+  divElement.style.fontFamily = 'CustomFont';
+
+  async function fetchLinesFromDataFile() {
+    const response = await fetch('https://raw.githubusercontent.com/aidarkhusnutdinov/wlag/main/ideas.txt');
+    const text = await response.text();
+    const lines = text.split('\n').filter(line => line.trim() !== '');
+    return lines;
+  }
+
+  let isButtonDisabled = false; // Track button disable state
+
+  button.addEventListener('click', async () => {
+    if (isButtonDisabled) return; // Return early if button is already disabled
+    isButtonDisabled = true; // Disable the button
+    divElement.textContent = ''; // Clear the text
+
+    // Wait for 1 second before fetching and displaying the new text
+    setTimeout(async () => {
+      const lines = await fetchLinesFromDataFile();
+      const randomIndex = Math.floor(Math.random() * lines.length);
+      const randomLine = lines[randomIndex];
+      divElement.textContent = randomLine;
+      isButtonDisabled = false; // Enable the button again
+    }, 1000);
+  });
+
+  // Check if the user is accessing the page from a phone
+  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+    divElement.style.fontSize = '6px';
+  }
+</script>
+
   </body>
 </html>
